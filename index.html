@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sohail Asghar - CV</title>
+    <title>Sohail Asghar</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -15,10 +15,10 @@
             transition: background 0.3s, color 0.3s;
         }
 
-        .container {
-            width: 80%;
+        .s-container {
             margin: auto;
             padding: 20px;
+            max-width: 800px;
         }
 
         header {
@@ -29,20 +29,25 @@
             border-radius: 10px;
         }
 
-        .s-profile img {
+        .s-profile-header {
+            position: relative;
+        }
+
+        .s-profile-header .s-profile-image {
             width: 120px;
             border-radius: 20%;
             border: 2px solid #fff;
         }
 
-        button {
-            margin-top: 10px;
-            padding: 10px;
+        .s-profile-header .s-theme-button {
+            position: absolute;
+            top: 0;
+            right: 0;
             border: none;
-            background: #444;
-            color: white;
+            background: none;
             cursor: pointer;
-            border-radius: 5px;
+            line-height: 0;
+            transition: transform 0.3s ease-in-out;
         }
 
         main {
@@ -63,8 +68,8 @@
         }
 
         ul li {
-            background: #0073b1;
-            color: white;
+            background: #ededed;
+            color: black;
             padding: 10px;
             margin: 5px 0;
             border-radius: 5px;
@@ -84,27 +89,43 @@
         }
 
         .dark-mode ul li {
-            background: #005582;
+            background: #5d5d5d;
+            color: white;
         }
     </style>
 </head>
 
 <body>
-    <div class="container">
+    <div class="s-container">
         <header>
-            <div class="s-profile">
-                <img src="profile.png" alt="Sohail Asghar">
+            <div class="s-profile-header">
+                <img class="s-profile-image" src="profile.png" alt="Sohail Asghar" />
                 <h1>Sohail Asghar</h1>
-                <p>Mobile App Developer | Web Developer</p>
-                <button id="toggle-dark-mode"><i class="fas fa-moon"></i> Dark Mode</button>
+                <p>Mobile App Developer</p>
+                <button id="toggle-dark-mode" class="s-theme-button">
+                    <img src="icon-theme.png" width="30px" height="30px" />
+                </button>
             </div>
         </header>
 
         <main>
             <section class="summary">
                 <h2>Summary</h2>
-                <p>Experienced mobile app developer with a track record of success creating apps that are both
-                    well-received and commercially viable...</p>
+                <p>Experienced mobile app developer with a proven track record of creating highly successful and commercially viable apps. Proficient in collaborative teamwork, adept at incorporating input into projects. Possesses a keen ability to enhance existing apps continually, ensuring sustained user engagement and downloads. Demonstrates a strong eye for detail and unwavering tenacity to persist until achieving perfection.</p>
+                
+                <h3>Technical Skills:</h3>
+                <ul>
+                    <li>Google Map integration in Android Native, iOS Native, Google Flutter</li>
+                    <li>Sign In / Sign Up with Phone Authentication, Google, Facebook, Apple using Firebase SDK</li>
+                    <li>Unity 3D Scenes integration in Android Native, iOS Native, Google Flutter</li>
+                    <li>Android, iOS, Flutter Bi-directional Communication with Unity 3D</li>
+                    <li>Realtime Databases using Firebase and Firestore</li>
+                    <li>Firebase Cloud Functions Scripting and Deployment</li>
+                    <li>Agora SDK Live Video Streaming</li>
+                    <li>Kotlin Live Data</li>
+                    <li>MVC and MVVM Design Pattern</li>
+                </ul>
+
             </section>
 
             <section class="experience">
@@ -151,8 +172,14 @@
         </main>
     </div>
     <script>
-        document.getElementById("toggle-dark-mode").addEventListener("click", function () {
+        let rotated = false;
+        const themeButton = document.getElementById("toggle-dark-mode");
+
+        themeButton.addEventListener("click", function () {
             document.body.classList.toggle("dark-mode");
+
+            rotated = !rotated;
+            themeButton.style.transform = rotated ? "rotate(180deg)" : "rotate(0deg)";
         });
     </script>
 </body>
