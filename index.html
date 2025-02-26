@@ -7,18 +7,44 @@
     <title>Sohail Asghar</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: "Roboto", serif;
+            font-optical-sizing: auto;
             margin: 0;
             padding: 0;
             background: #f4f4f4;
             color: #333;
             transition: background 0.3s, color 0.3s;
+            line-height: 1.6;
         }
 
-        .s-container {
-            margin: auto;
-            padding: 20px;
-            max-width: 800px;
+        h1 {
+            font-size: 32px;
+            font-weight: 500;
+            line-height: 0.5;
+        }
+        h2 {
+            font-size: 24px;
+            font-weight: 500;
+        }
+        h3 {
+            font-size: 18px;
+            font-weight: 500;
+        }
+        p {
+            font-size: 15px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul li {
+            background: #ededed;
+            color: #333;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+            font-size: 15px;
         }
 
         header {
@@ -26,7 +52,29 @@
             background: #0073b1;
             color: white;
             padding: 20px;
-            border-radius: 10px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.02);
+        }
+        main {
+            margin-top: 15px;
+        }
+
+        section {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.02);
+        }
+
+        .s-italic {
+            font-style: italic;
+        }
+
+        .s-container {
+            margin: auto;
+            padding: 15px;
+            max-width: 800px;
         }
 
         .s-profile-header {
@@ -50,29 +98,24 @@
             transition: transform 0.3s ease-in-out;
         }
 
-        main {
+        .s-profile-header .s-contact-info {
             margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: end;
+            gap: 10px;
+            color: white;
+            font-size: 14px;
+            font-weight: 500;
         }
 
-        section {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            margin-bottom: 20px;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        .s-profile-header .s-contact-info a {
+            text-decoration: none;
+            color: white;
         }
 
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        ul li {
-            background: #ededed;
-            color: black;
-            padding: 10px;
-            margin: 5px 0;
-            border-radius: 5px;
+        .s-profile-header .s-contact-info a:hover {
+            text-decoration: underline;
         }
 
         .dark-mode {
@@ -136,8 +179,9 @@
 
         .s-portfolio .s-timeline .s-content .s-tool {
             color: #0073b1;
-            font-weight: 600;
+            font-weight: 500;
             font-size: 15px;
+            font-style: italic;
         }
 
         .s-portfolio .s-timeline .s-content .s-images {
@@ -208,6 +252,12 @@
             background-color: rgba(0, 0, 0, 0.8);
         }
     </style>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
 </head>
 
 <body>
@@ -220,73 +270,94 @@
                 <button id="toggle-dark-mode" class="s-theme-button">
                     <img src="assets/images/icon-theme.png" width="30px" height="30px" />
                 </button>
+
+                <div class="s-contact-info">
+                    <span><a href="tel:+923048112781">+92 304 8112781</a> 📞</span>
+                    <span><a href="mailto:ahmed.sohail.asghar@gmail.com">ahmed.sohail.asghar@gmail.com</a> 📧</span>
+                    <span>Phase 1, Bahria Town, Rawalpindi 📍</span>
+                </div>
+
             </div>
         </header>
 
         <main>
-            <section class="summary">
-                <h2>Summary</h2>
-                <p>Experienced mobile app developer with a proven track record of creating highly successful and
-                    commercially viable apps. Proficient in collaborative teamwork, adept at incorporating input into
-                    projects. Possesses a keen ability to enhance existing apps continually, ensuring sustained user
-                    engagement and downloads. Demonstrates a strong eye for detail and unwavering tenacity to persist
-                    until achieving perfection.</p>
+            <section class="s-summary">
+                <h2>Professional Summary</h2>
+                <p>Experienced mobile app developer with a proven track record of designing and delivering commercially successful applications. Skilled in collaborative teamwork, effectively integrating feedback to refine and enhance projects. Adept at continuously improving existing apps to maintain user engagement and maximize downloads. Possesses a keen eye for detail and a relentless commitment to achieving excellence.</p>
 
                 <h3>Technical Skills:</h3>
                 <ul>
-                    <li>Google Map integration in Android Native, iOS Native, Google Flutter</li>
-                    <li>Sign In / Sign Up with Phone Authentication, Google, Facebook, Apple using Firebase SDK</li>
-                    <li>Unity 3D Scenes integration in Android Native, iOS Native, Google Flutter</li>
-                    <li>Android, iOS, Flutter Bi-directional Communication with Unity 3D</li>
+                    <li>Native Android development (Java, Kotlin)</li>
+                    <li>Native iOS development (Swift)</li>
+                    <li>Cross-platform development (Flutter)</li>
+                    <li>App store publishing (Google Play, App Store)</li>
+                    <li>UI/UX design principles for mobile apps</li>
+                    <li>Version control (Git, GitHub, GitLab)</li>
+                    <li>Agile & Scrum methodologies</li>
+                    <li>Login / Sign Up with Phone Authentication, Google, Facebook, Apple using Firebase SDK</li>
+                    <li>Biometric and Face Authentication</li>
+                    <li>Google Map, Geo, Places Integration</li>
+                    <li>Stripe, Hyperpay Payment Integration</li>
+                    <li>RESTful APIs Integration</li>
                     <li>Realtime Databases using Firebase and Firestore</li>
-                    <li>Firebase Cloud Functions Scripting and Deployment</li>
-                    <li>Agora SDK Live Video Streaming</li>
-                    <li>Kotlin Live Data</li>
-                    <li>MVC and MVVM Design Pattern</li>
+                    <li>Firebase Cloud Functions</li>
+                    <li>Websocket using Socket io</li>
+                    <li>Signal R</li>
                 </ul>
 
             </section>
 
-            <section class="experience">
+            <section class="s-experience">
                 <h2>Work Experience</h2>
-                <div class="job">
-                    <h3>Freelancer</h3>
-                    <span>2016 - Present</span>
-                    <p>Developed native Android and iOS apps, cross-platform solutions using Flutter, and web
-                        applications.</p>
+                
+                <div class="s-job">
+                    <h3>Mobile Team Lead</h3>
+                    <p>Hashtag Binary, Islamabad Pakistan (<span class="s-italic">2018 - Present</span>)</p>
+                    
+                    <ul>
+                        <li>Led mobile app development projects from conception to deployment.</li>
+                        <li>Managed app publishing on major app stores.</li>
+                        <li>Designed and developed scalable mobile solutions to meet business objectives.</li>
+                    </ul>
                 </div>
-                <div class="job">
-                    <h3>Mobile App Developer, Evolvingtech</h3>
-                    <span>2018 - Present</span>
-                    <p>Managed app development projects, published apps on stores, and built mobile solutions.</p>
+
+                <div class="s-job">
+                    <h3>Mobile App Developer</h3>
+                    <p>Bestweb Technologies, Malaysia (Remote Job) (<span class="s-italic">08/2020 - 01/2022</span>)</p>
+                    
+                    <ul>
+                        <li>Native Android app development using Java and Kotlin.</li>
+                        <li>Native iOS app development using Swift.</li>
+                        <li>Google and Apple app store publishing.</li>
+                    </ul>
                 </div>
+
+                <div class="s-job">
+                    <h3>Android App Developer</h3>
+                    <p>ZRG, Karachi Pakistan (<span class="s-italic">01/2018 - 04/2018</span>)</p>
+                    
+                    <ul>
+                        <li>Designed and developed android app.</li>
+                    </ul>
+                </div>
+
+                <div class="s-job">
+                    <h3>Android App Developer</h3>
+                    <p>Mavensol, Quetta Pakistan (<span class="s-italic">06/2016 - 09/2017</span>)</p>
+                    
+                    <ul>
+                        <li>Native android app development.</li>
+                        <li>Google Play store publishing.</li>
+                    </ul>
+                </div>
+
             </section>
 
-            <section class="education">
+            <section class="s-education">
                 <h2>Education</h2>
-                <p><strong>Bachelor of Computer Science</strong> - Buitems University (3.91 CGPA)</p>
-            </section>
-
-            <section class="skills">
-                <h2>Skills</h2>
-                <ul>
-                    <li>Java</li>
-                    <li>Kotlin</li>
-                    <li>Swift</li>
-                    <li>Flutter</li>
-                    <li>PHP</li>
-                    <li>JavaScript</li>
-                </ul>
-            </section>
-
-            <section class="projects">
-                <h2>Projects</h2>
-                <ul>
-                    <li>Food Ordering App</li>
-                    <li>University Social App</li>
-                    <li>Hair Salon Appointment Booking App</li>
-                    <li>Carpooling App</li>
-                </ul>
+                <h3>Bachelor of Science in Computer Science</h3>
+                <p>BUITEMS (Balochistan University of Information Technology, Engineering, and Management Sciences)</p>
+                <p>CGPA: 3.91 (<span class="s-italic">Gold Medalist</span>)</p>
             </section>
 
             <section class="s-portfolio">
@@ -313,12 +384,13 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="s-timeline-item">
                         <div class="s-content">
                             <h3>Courioo App</h3>
                             <span class="s-tool">Built using Flutter</span>
-                            <p>Courioo is a user-friendly app that helps students manage class schedules efficiently. Stay organized with real-time updates.</p>
+                            <p>Courioo is a user-friendly app that helps students manage class schedules efficiently.
+                                Stay organized with real-time updates.</p>
 
                             <div class="s-images">
                                 <img class="s-preview-img" src="assets/images/Courioo/1.png">
